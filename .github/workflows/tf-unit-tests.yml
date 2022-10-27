@@ -39,6 +39,7 @@ jobs:
         output_file_path: checkov.sarif
         
     - name: test
+      if: success() || failure()
       run: ls -lh
     
     # Upload results to GitHub Advanced Security
